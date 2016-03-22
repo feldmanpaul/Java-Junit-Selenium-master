@@ -34,8 +34,8 @@ import com.saucelabs.common.SauceOnDemandSessionIdProvider;
 @RunWith(ConcurrentParameterized.class)
 public class SampleSauceTestBase implements SauceOnDemandSessionIdProvider {
 
-    public String username = System.getenv("SAUCE_USERNAME");
-    public String accesskey = System.getenv("SAUCE_ACCESS_KEY");
+    //public String username = System.getenv("SAUCE_USERNAME");
+    //public String accesskey = System.getenv("SAUCE_ACCESS_KEY");
 
     //public String username = "feldman";
     //public String accesskey = "08f9b830-5581-498e-8f93-5652b3b8cf0c";
@@ -48,7 +48,9 @@ public class SampleSauceTestBase implements SauceOnDemandSessionIdProvider {
      * Constructs a {@link SauceOnDemandAuthentication} instance using the supplied user name/access key.  To use the authentication
      * supplied by environment variables or from an external file, use the no-arg {@link SauceOnDemandAuthentication} constructor.
      */
-    public SauceOnDemandAuthentication authentication = new SauceOnDemandAuthentication(username, accesskey);
+//    public SauceOnDemandAuthentication authentication = new SauceOnDemandAuthentication(username, accesskey);
+
+    public SauceOnDemandAuthentication authentication = new SauceOnDemandAuthentication("feldman", "08f9b830-5581-498e-8f93-5652b3b8cf0c");
 
     /**
      * JUnit Rule which will mark the Sauce Job as passed/failed when the test succeeds or fails.
@@ -191,7 +193,8 @@ public class SampleSauceTestBase implements SauceOnDemandSessionIdProvider {
         }
         SauceHelpers.addSauceConnectTunnelId(capabilities);
         this.driver = new RemoteWebDriver(
-                new URL("http://" + username+ ":" + accesskey + seleniumURI +"/wd/hub"),
+                //new URL("http://" + username+ ":" + accesskey + seleniumURI +"/wd/hub"),
+                new URL("http://" + authentication.getUsername() + ":" + authentication.getAccessKey() + seleniumURI +"/wd/hub"),
                 capabilities);
 
         this.sessionId = (((RemoteWebDriver) driver).getSessionId()).toString();
