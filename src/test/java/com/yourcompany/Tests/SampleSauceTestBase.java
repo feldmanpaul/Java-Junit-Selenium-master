@@ -164,8 +164,6 @@ public class SampleSauceTestBase implements SauceOnDemandSessionIdProvider {
 
 
 
-
-
         return browsers;
     }
 
