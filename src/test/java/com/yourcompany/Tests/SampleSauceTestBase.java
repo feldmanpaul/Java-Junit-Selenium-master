@@ -171,8 +171,6 @@ public class SampleSauceTestBase implements SauceOnDemandSessionIdProvider {
 
         browsers.add(new String[]{"Mac 10.10", "9.2", "iPhone", "iPhone 6", "portrait"});
 
-
-
         return browsers;
     }
 
