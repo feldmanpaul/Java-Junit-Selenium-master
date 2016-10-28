@@ -138,7 +138,10 @@ public class SampleSauceTestBase implements SauceOnDemandSessionIdProvider {
  
          // windows 10, Chrome latest-2
         browsers.add(new String[]{"Windows 10", "latest-2", "chrome", null, null});
-        
+       
+        // windows 7, Chrome latest
+        browsers.add(new String[]{"Windows 7", "latest", "chrome", null, null});
+
          // windows 7, Chrome 41
         browsers.add(new String[]{"Windows 7", "51", "chrome", null, null});
 
@@ -207,7 +210,9 @@ public class SampleSauceTestBase implements SauceOnDemandSessionIdProvider {
         SauceHelpers.addSauceConnectTunnelId(capabilities);
         this.driver = new RemoteWebDriver(
                 //new URL("http://" + username+ ":" + accesskey + seleniumURI +"/wd/hub"),
+                //new URL("http://" + authentication.getUsername() + ":" + authentication.getAccessKey() + seleniumURI +"/wd/hub"),
                 new URL("http://" + authentication.getUsername() + ":" + authentication.getAccessKey() + seleniumURI +"/wd/hub"),
+
                 capabilities);
 
         this.sessionId = (((RemoteWebDriver) driver).getSessionId()).toString();
