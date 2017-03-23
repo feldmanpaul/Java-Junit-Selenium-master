@@ -139,6 +139,9 @@ public class SampleSauceTestBase implements SauceOnDemandSessionIdProvider {
          // windows 10, Chrome latest-2
         browsers.add(new String[]{"Windows 10", "latest-2", "chrome", null, null});
        
+        // windows 10, Chrome 35
+        browsers.add(new String[]{"Windows 10", "35", "chrome", null, null});
+       
         // windows 7, Chrome latest
         browsers.add(new String[]{"Windows 7", "latest", "chrome", null, null});
 
@@ -173,8 +176,6 @@ public class SampleSauceTestBase implements SauceOnDemandSessionIdProvider {
         browsers.add(new String[]{"Linux", "4.4", "android", "Android Emulator", "portrait"});
 
         browsers.add(new String[]{"Mac 10.10", "9.2", "iPhone", "iPhone 6", "portrait"});
-
-
 
         return browsers;
     }
