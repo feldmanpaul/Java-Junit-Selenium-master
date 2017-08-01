@@ -135,7 +135,7 @@ public class SampleSauceTestBase implements SauceOnDemandSessionIdProvider {
         browsers.add(new String[]{"Windows 10", "latest-1", "chrome", null, null});
         browsers.add(new String[]{"Windows 10", "latest-2", "chrome", null, null});
  
-        // windows 10, Chrome latest
+        // windows 10, Firefox latest
         browsers.add(new String[]{"Windows 10", "latest", "firefox", null, null});
         browsers.add(new String[]{"Windows 10", "latest-1", "firefox", null, null});
         browsers.add(new String[]{"Windows 10", "latest-2", "firefox", null, null});
@@ -157,8 +157,12 @@ public class SampleSauceTestBase implements SauceOnDemandSessionIdProvider {
         // windows 7, IE 9
         browsers.add(new String[]{"Windows 7", "9", "internet explorer", null, null});
 
-        // windows 8, IE 10
+        // windows 8, IE 
         browsers.add(new String[]{"Windows 8", "10", "internet explorer", null, null});
+        browsers.add(new String[]{"Windows 8", "9", "internet explorer", null, null});
+        browsers.add(new String[]{"Windows 8", "8", "internet explorer", null, null});
+        browsers.add(new String[]{"Windows 8", "7", "internet explorer", null, null});
+        browsers.add(new String[]{"Windows 8", "6", "internet explorer", null, null});
 
         // windows 8.1, IE 11
         browsers.add(new String[]{"Windows 8.1", "11", "internet explorer", null, null});
