@@ -157,13 +157,6 @@ public class SampleSauceTestBase implements SauceOnDemandSessionIdProvider {
         // windows 7, IE 9
         browsers.add(new String[]{"Windows 8", "9", "internet explorer", null, null});
 
-        // windows 8, IE 
-        browsers.add(new String[]{"Windows 7", "10", "internet explorer", null, null});
-        browsers.add(new String[]{"Windows 7", "9", "internet explorer", null, null});
-        browsers.add(new String[]{"Windows 7", "8", "internet explorer", null, null});
-        browsers.add(new String[]{"Windows 7", "7", "internet explorer", null, null});
-        browsers.add(new String[]{"Windows 7", "6", "internet explorer", null, null});
-
         // windows 8.1, IE 11
         browsers.add(new String[]{"Windows 8.1", "11", "internet explorer", null, null});
 
